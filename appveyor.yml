@@ -5,7 +5,15 @@
     only:
       - develop
 
+  os: Visual Studio 2015
   configuration: Release
+
+ before_build:
+  - nuget restore
+
+  build:
+    verbosity: minimal
+    project: Alegri.Data.EF6.sln
 
 # configuration for all branches starting from "dev-"
 # build in Debug mode and deploy locally for testing
@@ -14,14 +22,6 @@
     only:
       - master
 
+  configuration: Release
 
-platform: Any CPU
-os: Visual Studio 2015
-configuration: Release
-
-before_build:
-  - nuget restore
-
-build:
-  verbosity: minimal
-  project: Alegri.Data.EF6.sln
+-
