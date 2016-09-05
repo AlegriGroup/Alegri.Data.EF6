@@ -4,7 +4,6 @@
   branches:
     only:
       - develop
-      - feature/*
 
   version: 0.0.{build}
 
