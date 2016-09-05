@@ -10,10 +10,12 @@ assembly_info:
   assembly_file_version: "{version}"
   assembly_informational_version: "{version}"
 
+platform:
+  - Any CPU
+
 before_build:
   - nuget restore
 
 build:
   verbosity: minimal
-  cmd: msbuild Alegri.Data.EF6.sln /p:Configuration=Release /p:DeployOnBuild=true /p:Platform=AnyCPU
-
+  cmd: Alegri.Data.EF6.sln
