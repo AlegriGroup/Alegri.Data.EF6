@@ -3,8 +3,9 @@
 -
   branches:
     only:
-      - develop
+      - master
 
+-
   os: Visual Studio 2015
   configuration: Release
 
@@ -14,12 +15,3 @@
   build:
     verbosity: minimal
     project: Alegri.Data.EF6.sln
-
-# configuration for all branches starting from "dev-"
-# build in Debug mode and deploy locally for testing
--
-  branches:
-    only:
-      - master
-
-  configuration: Release
