@@ -3,7 +3,8 @@
 -
   branches:
     only:
-      - master
+      - develop
+      - feature/*
 
   version: 0.0.{build}
 
