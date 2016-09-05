@@ -41,7 +41,7 @@
   - ps: nuget pack Alegri.Data.EF6.nuspec -version "$env:PackageVersion"
 
   artifacts:
-  - path: 'Alegri.Data.EF6.nupkg'
+  - path: 'Alegri.Data.EF6.*.nupkg'
     name: Alegri.Data.EF6-NuGetPackage
 
   deploy:
@@ -92,7 +92,7 @@
   - ps: nuget pack Alegri.Data.EF6.nuspec -version "$env:PackageVersion"
 
   artifacts:
-  - path: 'Alegri.Data.EF6.nupkg'
+  - path: 'Alegri.Data.EF6.*.nupkg'
     name: Alegri.Data.EF6-NuGetPackage
 
   deploy:
