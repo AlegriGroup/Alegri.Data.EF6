@@ -20,10 +20,11 @@ namespace Alegri.Data.EF6
             return entity;
         }
 
-        public static TEntity SetDeleted<TEntity>(this TEntity entity, string deletedBy, DateTime? deletedOn = null) where TEntity : class, ITrackedEntity
+        public static TEntity SetDeleted<TEntity>(this TEntity entity, string deletedBy, string reason,DateTime? deletedOn = null) where TEntity : class, ITrackedEntity
         {
             entity.DeletedOn = deletedOn ?? DateTime.UtcNow;
             entity.DeletedBy = deletedBy;
+            entity.DeletedReason = reason;
 
             return entity;
         }

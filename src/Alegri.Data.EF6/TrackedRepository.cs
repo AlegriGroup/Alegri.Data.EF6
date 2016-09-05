@@ -52,9 +52,9 @@ namespace Alegri.Data.EF6
             return GetAllNotDeleted(clause);
         }
 
-        public TEntity Delete(TEntity entity, string deletedBy)
+        public TEntity Delete(TEntity entity, string deletedBy, string reason)
         {
-            entity = entity.SetDeleted(deletedBy);
+            entity = entity.SetDeleted(deletedBy, reason);
 
             return base.Update(entity);
             // No delete here! Just mark as deleted

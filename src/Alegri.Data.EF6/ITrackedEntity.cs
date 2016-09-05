@@ -12,5 +12,6 @@ namespace Alegri.Data.EF6
 
         DateTime? DeletedOn { get; set; }
         string DeletedBy { get; set; }
+        string DeletedReason { get; set; }
     }
 }
