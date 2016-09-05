@@ -17,7 +17,7 @@
     </frameworkAssemblies>
   </metadata>
   <files>
-      <file src="Odin\bin\Release\Alegri.Data.EF6.dll" target="lib\net45" />
-      <file src="Odin\bin\Release\Alegri.Data.EF6.XML" target="lib\net45" />
+      <file src="src\Alegri.Data.EF6\bin\Release\Alegri.Data.EF6.dll" target="lib\net45" />
+      <file src="src\Alegri.Data.EF6\bin\Release\Alegri.Data.EF6.XML" target="lib\net45" />
   </files>
 </package>
