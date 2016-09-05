@@ -18,4 +18,4 @@ before_build:
 
 build:
   verbosity: minimal
-  cmd: Alegri.Data.EF6.sln
+  project: Alegri.Data.EF6.sln
