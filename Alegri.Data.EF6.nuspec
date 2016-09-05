@@ -8,6 +8,7 @@
     <licenseUrl>hhttps://github.com/AlegriGroup/Alegri.Data.EF6/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectUrl>https://github.com/AlegriGroup/Alegri.Data.EF6</projectUrl>
+    <description>EF6 functionality of Alegri International Service GmbH</description>
     <dependencies>
       <dependency id="EntityFramework" version="6.1.3" />
     </dependencies> 
