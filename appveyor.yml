@@ -38,7 +38,7 @@
     project: Alegri.Data.EF6.sln
 
   after_build:
-  - nuget pack Alegri.Data.EF6.nuspec -version "$env:PackageVersion"
+  - ps: nuget pack Alegri.Data.EF6.nuspec -version "$env:PackageVersion"
 
   artifacts:
   - path: 'Alegri.Data.EF6.nupkg'
@@ -89,7 +89,7 @@
     project: Alegri.Data.EF6.sln
 
   after_build:
-  - nuget pack Alegri.Data.EF6.nuspec -version "$env:PackageVersion"
+  - ps: nuget pack Alegri.Data.EF6.nuspec -version "$env:PackageVersion"
 
   artifacts:
   - path: 'Alegri.Data.EF6.nupkg'
