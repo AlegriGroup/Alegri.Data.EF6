@@ -5,7 +5,9 @@ using System.Linq;
 
 namespace Alegri.Data.EF6
 {
-
+    /// <summary>
+    /// Base implementation for a validatable entity
+    /// </summary>
     public abstract class ValidatableEntity : TrackedEntity
     {
         /// <summary>
