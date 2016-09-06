@@ -9,6 +9,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{CFBA952F-6CB
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{1A28FB1E-2987-4B72-A3D3-2F4666C53941}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alegri.Data.EF6.IntegrationTests", "tests\Alegri.Data.EF6.IntegrationTests\Alegri.Data.EF6.IntegrationTests.csproj", "{E215EAB0-B3BF-45B0-B5C6-0DDA8571CE79}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,11 +21,16 @@ Global
 		{BFE40EBA-D82A-41A8-A315-5C4F4C2A779E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BFE40EBA-D82A-41A8-A315-5C4F4C2A779E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BFE40EBA-D82A-41A8-A315-5C4F4C2A779E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E215EAB0-B3BF-45B0-B5C6-0DDA8571CE79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E215EAB0-B3BF-45B0-B5C6-0DDA8571CE79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E215EAB0-B3BF-45B0-B5C6-0DDA8571CE79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E215EAB0-B3BF-45B0-B5C6-0DDA8571CE79}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{BFE40EBA-D82A-41A8-A315-5C4F4C2A779E} = {CFBA952F-6CBA-4CCF-ADEF-F93F87D28189}
+		{E215EAB0-B3BF-45B0-B5C6-0DDA8571CE79} = {1A28FB1E-2987-4B72-A3D3-2F4666C53941}
 	EndGlobalSection
 EndGlobal

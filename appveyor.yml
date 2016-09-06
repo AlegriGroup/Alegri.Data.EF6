@@ -40,6 +40,11 @@
   after_build:
   - ps: nuget pack Alegri.Data.EF6.nuspec -version "$env:PackageVersion"
 
+  test:
+    assemblies:
+      - 'tests\*.UnitTests.dll'
+      - 'tests\*.IntegrationTests.dll'
+
   artifacts:
   - path: 'Alegri.Data.EF6.*.nupkg'
     name: Alegri.Data.EF6-NuGetPackage
@@ -87,6 +92,11 @@
   build:
     verbosity: minimal
     project: Alegri.Data.EF6.sln
+
+  test:
+    assemblies:
+      - 'tests\*.UnitTests.dll'
+      - 'tests\*.IntegrationTests.dll'
 
   after_build:
   - ps: nuget pack Alegri.Data.EF6.nuspec -version "$env:PackageVersion"
