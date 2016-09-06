@@ -95,8 +95,8 @@
 
   test:
     assemblies:
-      - 'tests\*.UnitTests.dll'
-      - 'tests\*.IntegrationTests.dll'
+      - 'tests\**.UnitTests.dll'
+      - 'tests\**.IntegrationTests.dll'
 
   after_build:
   - ps: nuget pack Alegri.Data.EF6.nuspec -version "$env:PackageVersion"
