@@ -5,7 +5,7 @@
     only:
       - develop
 
-  version: 0.1.{build}
+  version: 0.2.{build}
 
   environment:
     packageVersion: $env:buildVersion
@@ -59,9 +59,9 @@
 -
   branches:
     only:
-    - /release\/.*/
+    - master
 
-  version: 0.1.{build}
+  version: 0.2.{build}
 
   environment:
     packageVersion: $env:buildVersion
@@ -110,11 +110,14 @@
       api_key:
         secure: nUr0+fG+AubyMq/gSKDeCzCEyeiJmHNmfaX+1FgGMbDvZzSm6oelRY3+xjaM+IO3
       artifact: Alegri.Data.EF6-NuGetPackage
+      on:
+        branch: master
+        appveyor_repo_tag: true
 
 # all other branches
-# compile, test
+# compile, test, release
 -
-  version: 0.1.{build}
+  version: 0.2.{build}
 
   configuration: Release
 
