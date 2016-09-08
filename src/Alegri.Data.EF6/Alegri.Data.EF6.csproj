@@ -59,6 +59,7 @@
     <Compile Include="IEntity.cs" />
     <Compile Include="InvalidEntityException.cs" />
     <Compile Include="ITrackedEntity.cs" />
+    <Compile Include="ITrackedRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TrackedEntity.cs" />
     <Compile Include="TrackedRepository.cs" />

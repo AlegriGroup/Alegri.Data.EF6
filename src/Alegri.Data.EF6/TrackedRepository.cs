@@ -7,8 +7,7 @@ namespace Alegri.Data.EF6
     /// Base implementation of a tracked entity
     /// </summary>
     /// <typeparam name="TEntity">Tracked entity</typeparam>
-    public abstract class TrackedRepository<TEntity> : ValidatableRepository<TEntity>
-        where TEntity : ValidatableEntity, IEntity, ITrackedEntity
+    public abstract class TrackedRepository<TEntity> : ValidatableRepository<TEntity>, ITrackedRepository<TEntity> where TEntity : ValidatableEntity, IEntity, ITrackedEntity
     {
         /// <summary>
         /// Creates an instance with the given db context
@@ -55,6 +54,21 @@ namespace Alegri.Data.EF6
         public IQueryable<TEntity> GetAllNotDeleted(Func<TEntity, bool> clause = null)
         {
             var query = base.GetMany(entity => entity.DeletedOn == null);
+
+            if(clause != null)
+            {
+                query = query.Where(clause).AsQueryable();
+            }
+
+            return query;
+        }
+
+        /// <summary>
+        /// Returns all deleted entities with optional <paramref name="clause"/>
+        /// </summary>
+        public IQueryable<TEntity> GetAllDeleted(Func<TEntity, bool> clause = null)
+        {
+            var query = base.GetMany(entity => entity.DeletedOn != null);
 
             if(clause != null)
             {
