@@ -5,7 +5,7 @@
     only:
       - develop
 
-  version: 0.2.{build}
+  version: 0.3.{build}
 
   environment:
     packageVersion: $env:buildVersion
@@ -61,7 +61,7 @@
     only:
     - master
 
-  version: 0.2.{build}
+  version: 0.3.{build}
 
   environment:
     packageVersion: $env:buildVersion
@@ -117,7 +117,7 @@
 # all other branches
 # compile, test, release
 -
-  version: 0.2.{build}
+  version: 0.3.{build}
 
   configuration: Release
 
