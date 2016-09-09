@@ -5,8 +5,8 @@
 
 | Branch | Type | AppVeyor | NuGet |
 |---|---|---|---|
-|master| Stable |  [![AppVeyor](https://img.shields.io/appveyor/ci/AlegriGroup/Alegri-Data-EF6/master.svg?style=flat-square)](https://ci.appveyor.com/project/AlegriGroup/Alegri-Data-EF6) | ![NuGetStable](https://img.shields.io/nuget/v/Alegri.Data.EF6.png?style=flat-square) |
-|develop| Pre Releases | [![AppVeyor](https://img.shields.io/appveyor/ci/AlegriGroup/Alegri-Data-EF6/develop.svg?style=flat-square)](https://ci.appveyor.com/project/AlegriGroup/Alegri-Data-EF6) | ![NuGetStable](https://img.shields.io/nuget/vpre/Alegri.Data.EF6.png?style=flat-square) | 
+|master| Stable |  [![AppVeyor Stable](https://img.shields.io/appveyor/ci/AlegriGroup/Alegri-Data-EF6/master.svg?style=flat-square)](https://ci.appveyor.com/project/AlegriGroup/Alegri-Data-EF6) | [![NuGet](https://img.shields.io/nuget/v/Alegri.Data.EF6.svg?style=flat-square)](https://www.nuget.org/packages/Alegri.Data.EF6) |
+|develop| Pre Releases | [![AppVeyor Unstable](https://img.shields.io/appveyor/ci/AlegriGroup/Alegri-Data-EF6/develop.svg?style=flat-square)](https://ci.appveyor.com/project/AlegriGroup/Alegri-Data-EF6) | [![MyGet](https://img.shields.io/myget/alegri/vpre/Alegri.Data.EF6.svg?style=flat-square)](https://www.myget.org/feed/alegri/package/nuget/Alegri.Data.EF6) | 
 
 # Description
 Provides infrastructure elements to build a data access layer based on Entity Framework 6.1.3
