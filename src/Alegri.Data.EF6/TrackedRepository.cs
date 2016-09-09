@@ -49,10 +49,10 @@ namespace Alegri.Data.EF6
         }
 
         /// <summary>
-        /// Returns an entity by given if not deleted
+        /// Returns an entity by given if deleted
         /// </summary>
         /// <param name="id">id to search for</param>
-        /// <returns>null if not found or deleted</returns>
+        /// <returns>null if not found or not deleted</returns>
         public TEntity GetDeleted(Guid id)
         {
             var entity = base.Get(id);

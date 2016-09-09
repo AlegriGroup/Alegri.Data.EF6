@@ -24,6 +24,13 @@ namespace Alegri.Data.EF6
         TEntity Get(Guid id);
 
         /// <summary>
+        /// Returns an entity by given if deleted
+        /// </summary>
+        /// <param name="id">id to search for</param>
+        /// <returns>null if not found or not deleted</returns>
+        TEntity GetDeleted(Guid id);
+
+        /// <summary>
         /// Returns all not deleted entities with optional <paramref name="clause"/>
         /// </summary>
         IQueryable<TEntity> GetAllNotDeleted(Func<TEntity, bool> clause = null);
