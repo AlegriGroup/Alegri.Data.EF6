@@ -94,5 +94,16 @@ namespace Alegri.Data.EF6
             return base.Update(entity);
             // No delete here! Just mark as deleted
         }
+
+        /// <summary>
+        /// marks an entity as deleted. does not remove entity
+        /// </summary>
+        public TEntity Undelete(TEntity entity, string undeletedBy)
+        {
+            entity = entity.SetUndeleted(undeletedBy);
+
+            return base.Update(entity);
+            // No delete here! Just mark as deleted
+        }
     }
 }

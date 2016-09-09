@@ -56,6 +56,11 @@ namespace Alegri.Data.EF6
         TEntity Delete(TEntity entity, string deletedBy, string reason);
 
         /// <summary>
+        /// marks an entity as undeleted.
+        /// </summary>
+        TEntity Undelete(TEntity entity, string undeletedBy);
+
+        /// <summary>
         /// Current DbContext
         /// </summary>
         IDatabaseContext DbContext { get; }

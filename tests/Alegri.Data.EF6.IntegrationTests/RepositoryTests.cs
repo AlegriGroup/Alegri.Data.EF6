@@ -57,6 +57,9 @@ namespace Alegri.Data.EF6.IntegrationTests
             deletedEntity.LastUpdatedBy.Should().Be("UNIT TEST");
             deletedEntity.LastUpdatedOn.Should().NotBe(default(DateTime));
 
+
+            deletedEntity.LastUpdatedOn.Should().Be((DateTime)deletedEntity.DeletedOn);
+
             var removed = _testRepository.Get(entity.Id);
             removed.IsDeleted().Should().BeTrue();
             _testRepository.Get(entity.Id).Should().Be(deletedEntity);
