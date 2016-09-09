@@ -8,8 +8,7 @@ namespace Alegri.Data.EF6
     /// This repository offers basic CRUD functions to access a database provider with the Entity Framework
     /// </summary>
     /// <typeparam name="TEntity">Entity</typeparam>
-    public abstract class BaseRepository<TEntity>
-        where TEntity : class, IEntity
+    public abstract class BaseRepository<TEntity> : IBaseRepository<TEntity> where TEntity : class, IEntity
     {
         /// <summary>
         /// Default comparison culture on string compares

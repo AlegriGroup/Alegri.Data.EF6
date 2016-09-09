@@ -21,9 +21,7 @@ namespace Alegri.Data.EF6
         /// </summary>
         public TEntity Add(TEntity entity, string addedBy)
         {
-            entity = entity.SetCreated(addedBy);
-
-            return base.Add(entity);
+            return base.Add(entity.SetCreated(addedBy));
         }
 
         /// <summary>
@@ -31,33 +29,29 @@ namespace Alegri.Data.EF6
         /// </summary>
         public TEntity Update(TEntity entity, string updatedBy)
         {
-            entity = entity.SetUpdated(updatedBy);
-
-            return base.Update(entity);
+            return base.Update(entity.SetUpdated(updatedBy));
         }
 
         /// <summary>
-        /// Returns an entity by given if not deleted
+        /// Returns an entity by given id
         /// </summary>
         /// <param name="id">id to search for</param>
-        /// <returns>null if not found or deleted</returns>
-        public override TEntity Get(Guid id)
-        {
-            var entity = base.Get(id);
-
-            return entity.DeletedOn == null ? entity : null;
-        }
-
-        /// <summary>
-        /// Returns an entity by given if deleted
-        /// </summary>
-        /// <param name="id">id to search for</param>
-        /// <returns>null if not found or not deleted</returns>
+        /// <returns>null if not found, and null if found but not deleted</returns>
         public TEntity GetDeleted(Guid id)
         {
-            var entity = base.Get(id);
+            TEntity entity = base.Get(id);
+            return entity.IsDeleted() ? entity : null;
+        }
 
-            return entity.DeletedOn != null ? entity : null;
+        /// <summary>
+        /// Returns an entity by given id
+        /// </summary>
+        /// <param name="id">id to search for</param>
+        /// <returns>null if not found, and null if found but deleted</returns>
+        public TEntity GetNotDeleted(Guid id)
+        {
+            TEntity entity = base.Get(id);
+            return entity.IsDeleted() ? null : entity;
         }
 
         /// <summary>
@@ -88,22 +82,6 @@ namespace Alegri.Data.EF6
             }
 
             return query;
-        }
-
-        /// <summary>
-        /// Returns <see cref="GetAllNotDeleted"/> with no clause
-        /// </summary>
-        public override IQueryable<TEntity> GetAll()
-        {
-            return GetAllNotDeleted();
-        }
-
-        /// <summary>
-        /// Returns <see cref="GetAllNotDeleted"/> with clause
-        /// </summary>
-        public override IQueryable<TEntity> GetMany(Func<TEntity, bool> clause)
-        {
-            return GetAllNotDeleted(clause);
         }
 
         /// <summary>

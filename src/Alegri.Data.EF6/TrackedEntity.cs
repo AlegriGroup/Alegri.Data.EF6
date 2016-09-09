@@ -42,5 +42,14 @@ namespace Alegri.Data.EF6
         /// Delete reason
         /// </summary>
         public string DeletedReason { get; set; }
+
+        /// <summary>
+        /// An entity is deleted if <see cref="DeletedOn"/> is not null.
+        /// </summary>
+        /// <returns>true if <see cref="DeletedOn"/> is set</returns>
+        public bool IsDeleted()
+        {
+            return DeletedOn != null;
+        }
     }
 }
