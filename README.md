@@ -45,3 +45,11 @@ Provides infrastructure elements to build a data access layer based on Entity Fr
     LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
     OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
     SOFTWARE.
+
+# Alegri Network
+
+| Name | Title | Link |
+|-|-|-|
+| GitHub | Open Source Projects, demos and code samples | https://github.com/AlegriGroup |
+| Public NuGet | Stable Packages | https://www.nuget.org/profiles/ALEGRI |
+| Public MyGet | Unstable Packages | https://www.myget.org/feed/Packages/alegri |
