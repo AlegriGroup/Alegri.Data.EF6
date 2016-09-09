@@ -1,4 +1,4 @@
-[![Alegri](assets/Alegri-Logo.png)](http://www.alegri.eu)
+[![Alegri](https://github.com/AlegriGroup/StaticResources/raw/master/Alegri-Logo.png)](http://www.alegri.eu)
 
 # Alegri.Data.EF6
 *by [Alegri International Service GmbH](http://www.alegri.eu)

@@ -6,6 +6,7 @@
     <authors>Alegri International Service GmbH</authors>
     <copyright>Copyright 2016 Alegri International Service GmbH</copyright>
     <licenseUrl>https://github.com/AlegriGroup/Alegri.Data.EF6/blob/master/LICENSE</licenseUrl>
+    <iconUrl>https://github.com/AlegriGroup/StaticResources/raw/master/Alegri-Logo-64-64.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectUrl>https://github.com/AlegriGroup/Alegri.Data.EF6</projectUrl>
     <description>EF6 functionality of Alegri International Service GmbH</description>
