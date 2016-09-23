@@ -40,6 +40,11 @@ namespace Alegri.Data.EF6
         public TEntity GetDeleted(Guid id)
         {
             TEntity entity = base.Get(id);
+            if(entity == null)
+            {
+                return null;
+            }
+
             return entity.IsDeleted() ? entity : null;
         }
 
@@ -51,6 +56,11 @@ namespace Alegri.Data.EF6
         public TEntity GetNotDeleted(Guid id)
         {
             TEntity entity = base.Get(id);
+            if (entity == null)
+            {
+                return null;
+            }
+
             return entity.IsDeleted() ? null : entity;
         }
 
