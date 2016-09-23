@@ -1,12 +1,12 @@
-[![Alegri](assets/Alegri-Logo.png)](http://www.alegri.eu)
+[![Alegri](https://github.com/AlegriGroup/StaticResources/raw/master/Alegri-Logo.png)](http://www.alegri.eu)
 
 # Alegri.Data.EF6
-*by [Alegri International Service GmbH](http://www.alegri.eu)
+*by [Alegri International Service GmbH](http://www.alegri.eu)*
 
-| Branch | Type | AppVeyor | NuGet |
+| Branch | Type | AppVeyor | NuGet Package |
 |---|---|---|---|
-|master| Stable |  [![AppVeyor](https://img.shields.io/appveyor/ci/AlegriGroup/Alegri-Data-EF6/master.svg?style=flat-square)](https://ci.appveyor.com/project/AlegriGroup/Alegri-Data-EF6) | ![NuGetStable](https://img.shields.io/nuget/v/Alegri.Data.EF6.png?style=flat-square) |
-|develop| Pre Releases | [![AppVeyor](https://img.shields.io/appveyor/ci/AlegriGroup/Alegri-Data-EF6/develop.svg?style=flat-square)](https://ci.appveyor.com/project/AlegriGroup/Alegri-Data-EF6) | ![NuGetStable](https://img.shields.io/nuget/vpre/Alegri.Data.EF6.png?style=flat-square) | 
+|master| Stable |  [![AppVeyor Stable](https://img.shields.io/appveyor/ci/AlegriGroup/Alegri-Data-EF6/master.svg?style=flat-square)](https://ci.appveyor.com/project/AlegriGroup/Alegri-Data-EF6) | [![NuGet](https://img.shields.io/nuget/v/Alegri.Data.EF6.svg?style=flat-square)](https://www.nuget.org/packages/Alegri.Data.EF6) on [NuGet](https://www.nuget.org/packages/Alegri.Data.EF6)|
+|develop| Pre Releases | [![AppVeyor Unstable](https://img.shields.io/appveyor/ci/AlegriGroup/Alegri-Data-EF6/develop.svg?style=flat-square)](https://ci.appveyor.com/project/AlegriGroup/Alegri-Data-EF6) | [![MyGet](https://img.shields.io/myget/alegri/vpre/Alegri.Data.EF6.svg?style=flat-square)](https://www.myget.org/feed/alegri/package/nuget/Alegri.Data.EF6) on [MyGet](https://www.myget.org/feed/alegri/package/nuget/Alegri.Data.EF6) | 
 
 # Description
 Provides infrastructure elements to build a data access layer based on Entity Framework 6.1.3
@@ -21,6 +21,19 @@ Provides infrastructure elements to build a data access layer based on Entity Fr
 
 ## NuGet Packages
 - EntityFramework v6.1.3
+
+# Releases
+
+## Stable on NuGet
+We publish stable releases to NuGet.
+
+    Install-Package Alegri.Data.EF6
+
+## Pre on MyGet
+
+Use our [Alegri Development feed](https://www.myget.org/gallery/alegri) `https://www.myget.org/F/alegri/api/v3/index.json` on [MyGet](https://www.myget.org/gallery/alegri) for unstable releases.
+
+    Install-Package Alegri.Data.EF6 -Pre
 
 # License
 
@@ -45,3 +58,11 @@ Provides infrastructure elements to build a data access layer based on Entity Fr
     LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
     OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
     SOFTWARE.
+
+# Alegri Network
+
+| Name | Title | Link |
+|---|---|---|
+| GitHub | Open Source Projects, demos and code samples | https://github.com/AlegriGroup |
+| Public NuGet | Stable Packages | https://www.nuget.org/profiles/ALEGRI |
+| Public MyGet | Unstable Packages | https://www.myget.org/gallery/alegri |

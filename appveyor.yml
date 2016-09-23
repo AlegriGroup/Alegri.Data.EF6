@@ -5,7 +5,7 @@
     only:
       - develop
 
-  version: 0.2.{build}
+  version: 0.3.{build}
 
   environment:
     packageVersion: $env:buildVersion
@@ -51,8 +51,9 @@
 
   deploy:
     - provider: NuGet
+      server: https://www.myget.org/F/alegri/api/v2/package
       api_key:
-        secure: nUr0+fG+AubyMq/gSKDeCzCEyeiJmHNmfaX+1FgGMbDvZzSm6oelRY3+xjaM+IO3
+        secure: Dugwftpg20GynRFSdLsuM12CnH3Rtguvu0BTBMURWHwc+FZvvBON4Za2r52FCdr5
       artifact: Alegri.Data.EF6-NuGetPackage
 
 # release branch
@@ -61,7 +62,7 @@
     only:
     - master
 
-  version: 0.2.{build}
+  version: 0.3.{build}
 
   environment:
     packageVersion: $env:buildVersion
@@ -117,7 +118,7 @@
 # all other branches
 # compile, test, release
 -
-  version: 0.2.{build}
+  version: 0.3.{build}
 
   configuration: Release
 

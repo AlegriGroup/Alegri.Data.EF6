@@ -7,7 +7,7 @@ namespace Alegri.Data.EF6
     /// base implementation for a repository of a validatable entity
     /// </summary>
     /// <typeparam name="TEntity">Validatable entity</typeparam>
-    public abstract class ValidatableRepository<TEntity> : BaseRepository<TEntity> where TEntity : ValidatableEntity
+    public abstract class ValidatableRepository<TEntity> : BaseRepository<TEntity>, IValidatableRepository<TEntity> where TEntity : ValidatableEntity
     {
         /// <summary>
         /// Creates an instance with given <paramref name="dbContext"/>
