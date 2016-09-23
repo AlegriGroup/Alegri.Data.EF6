@@ -22,6 +22,19 @@ Provides infrastructure elements to build a data access layer based on Entity Fr
 ## NuGet Packages
 - EntityFramework v6.1.3
 
+# Releases
+
+## Stable on NuGet
+We publish stable releases to NuGet.
+
+    Install-Package Alegri.Data.EF6
+
+## Pre on MyGet
+
+Use our [Alegri Development feed](https://www.myget.org/gallery/alegri) `https://www.myget.org/F/alegri/api/v3/index.json` on [MyGet](https://www.myget.org/gallery/alegri) for unstable releases.
+
+    Install-Package Alegri.Data.EF6 -Pre
+
 # License
 
     MIT License
