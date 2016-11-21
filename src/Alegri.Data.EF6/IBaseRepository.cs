@@ -67,9 +67,11 @@ namespace Alegri.Data.EF6
         bool Exists(Guid id);
 
         /// <summary>
-        /// Commits all chanegs to the current dbContext
+        /// Commits all changes to the current dbContext
         /// </summary>
         /// <returns></returns>
         int Save();
+
+
     }
 }
