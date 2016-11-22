@@ -59,6 +59,7 @@
     <Compile Include="IDatabaseContext.cs" />
     <Compile Include="IEntity.cs" />
     <Compile Include="InvalidEntityException.cs" />
+    <Compile Include="IQueryableExtensions.cs" />
     <Compile Include="ITrackedEntity.cs" />
     <Compile Include="ITrackedRepository.cs" />
     <Compile Include="IValidatableRepository.cs" />

@@ -113,7 +113,7 @@ namespace Alegri.Data.EF6
             entity = entity.SetUndeleted(undeletedBy);
 
             return base.Update(entity);
-            // No delete here! Just mark as deleted
+            // Just mark as undeleted
         }
     }
 }

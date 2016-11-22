@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data.Entity;
 using System.Linq;
+using System.Linq.Expressions;
 
 namespace Alegri.Data.EF6
 {
@@ -36,10 +37,27 @@ namespace Alegri.Data.EF6
         }
 
         // CRUD
+        /// <summary>
+        /// Get the entity by its id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public virtual TEntity Get(Guid id)
         {
             return Get(entity => entity.Id == id);
         }
+
+        /// <summary>
+        /// Get the entity by its id including related entities
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="include"></param>
+        /// <returns></returns>
+        public virtual TEntity Get(Guid id, params Expression<Func<TEntity, object>>[] include)
+        {
+            return Get(entity => entity.Id == id, include);
+        }
+
         /// <summary>
         /// Returns a single entity with the matchin clause
         /// </summary>
@@ -48,6 +66,17 @@ namespace Alegri.Data.EF6
         public virtual TEntity Get(Func<TEntity, bool> clause)
         {
             return CurrentSet.SingleOrDefault(clause);
+        }
+
+        /// <summary>
+        /// Returns a single entity with the matchin clause
+        /// </summary>
+        /// <param name="clause">clause for filter on an entity</param>
+        /// <param name="include">including related entites (eager loading)</param>
+        /// <returns>null if no item matches</returns>
+        public virtual TEntity Get(Func<TEntity, bool> clause, params Expression<Func<TEntity, object>>[] include)
+        {
+            return CurrentSet.AsQueryable().IncludeMultiple(include).SingleOrDefault(clause);
         }
 
         /// <summary>
@@ -60,6 +89,15 @@ namespace Alegri.Data.EF6
         }
 
         /// <summary>
+        /// Returns the entity set
+        /// </summary>
+        /// <returns><see cref="IQueryable{TEntity}"/></returns>
+        public virtual IQueryable<TEntity> GetAll(params Expression<Func<TEntity, object>>[] include)
+        {
+            return CurrentSet.IncludeMultiple(include).AsQueryable();
+        }
+
+        /// <summary>
         /// Returns all matching entities
         /// </summary>
         /// <param name="clause">filter</param>
@@ -67,6 +105,17 @@ namespace Alegri.Data.EF6
         public virtual IQueryable<TEntity> GetMany(Func<TEntity, bool> clause)
         {
             return CurrentSet.Where(clause).AsQueryable();
+        }
+
+        /// <summary>
+        /// Returns all matching entities including related entities
+        /// </summary>
+        /// <param name="clause">filter</param>
+        /// <param name="include">the includes for eager loading</param>
+        /// <returns><see cref="IQueryable{TEntity}"/></returns>
+        public virtual IQueryable<TEntity> GetMany(Func<TEntity, bool> clause, params Expression<Func<TEntity, object>>[] include)
+        {
+            return CurrentSet.Where(clause).AsQueryable().IncludeMultiple(include);
         }
 
         /// <summary>
