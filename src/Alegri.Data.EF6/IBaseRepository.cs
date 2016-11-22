@@ -1,6 +1,7 @@
 using System;
 using System.Data.Entity;
 using System.Linq;
+using System.Linq.Expressions;
 
 namespace Alegri.Data.EF6
 {
@@ -26,6 +27,14 @@ namespace Alegri.Data.EF6
         TEntity Get(Func<TEntity, bool> clause);
 
         /// <summary>
+        /// Returns a single entity with the matchin clause and includes related entites
+        /// </summary>
+        /// <param name="clause">clause for filter on an entity</param>
+        /// <param name="include">including related entities (eager loading)</param>
+        /// <returns>null if no item matches</returns>
+        TEntity Get(Func<TEntity, bool> clause, params Expression<Func<TEntity, object>>[] include);
+
+        /// <summary>
         /// Returns the entity set
         /// </summary>
         /// <returns><see cref="IQueryable{T}"/></returns>
@@ -39,11 +48,19 @@ namespace Alegri.Data.EF6
         IQueryable<TEntity> GetMany(Func<TEntity, bool> clause);
 
         /// <summary>
-        /// Adds an entity to the current set
+        /// Returns all matching entities including related entities
         /// </summary>
-        /// <param name="entity">entity to add</param>
-        /// <returns>returns the added entity</returns>
-        TEntity Add(TEntity entity);
+        /// <param name="clause">filter</param>
+        /// <param name="include">the includes for eager loading</param>
+        /// <returns><see cref="IQueryable{TEntity}"/></returns>
+        IQueryable<TEntity> GetMany(Func<TEntity, bool> clause, params Expression<Func<TEntity, object>>[] include);
+
+            /// <summary>
+            /// Adds an entity to the current set
+            /// </summary>
+            /// <param name="entity">entity to add</param>
+            /// <returns>returns the added entity</returns>
+            TEntity Add(TEntity entity);
 
         /// <summary>
         /// Updates the given entity and marks the entity in the current set as modified
@@ -67,9 +84,11 @@ namespace Alegri.Data.EF6
         bool Exists(Guid id);
 
         /// <summary>
-        /// Commits all chanegs to the current dbContext
+        /// Commits all changes to the current dbContext
         /// </summary>
         /// <returns></returns>
         int Save();
+
+
     }
 }
